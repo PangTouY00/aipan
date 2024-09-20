@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node
 
 LABEL authors="Lei"
 
@@ -10,9 +10,7 @@ RUN npm install -g pnpm
 # 复制 package.json 和 package-lock.json
 COPY package*.json ./
 
-RUN apk add python3 && export PATH=$PATH:/usr/bin/python3
-
-RUN apt-get install -y build-essential
+npm install -g node-gyp
 
 # 使用 pnpm 安装依赖
 RUN pnpm install
