@@ -10,10 +10,9 @@ RUN npm install -g pnpm
 # 复制 package.json 和 package-lock.json
 COPY package*.json ./
 
-RUN sudo apt-get update
-RUN sudo apt-get install build-essential
-
 RUN apk add python3 && export PATH=$PATH:/usr/bin/python3
+
+RUN pnpm install --build-from-source
 
 # 使用 pnpm 安装依赖
 RUN pnpm install
