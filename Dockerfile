@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18-slim-armv7l
 
 LABEL authors="Lei"
 
