@@ -1,4 +1,4 @@
-FROM node:22-alpine3.2
+FROM node
 
 LABEL authors="Lei"
 
