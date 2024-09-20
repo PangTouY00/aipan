@@ -1,4 +1,4 @@
-FROM prismagraphql/prisma:2.26.0-nightly.6306-armv7l
+FROM node:22-alpine
 
 LABEL authors="Lei"
 
