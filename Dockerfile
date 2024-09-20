@@ -1,4 +1,4 @@
-FROM node
+FROM arm32v7/node:latest
 
 LABEL authors="Lei"
 
