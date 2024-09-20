@@ -12,7 +12,7 @@ COPY package*.json ./
 
 RUN apk add python3 && export PATH=$PATH:/usr/bin/python3
 
-RUN pnpm install --build-from-source
+RUN apt-get install -y build-essential
 
 # 使用 pnpm 安装依赖
 RUN pnpm install
