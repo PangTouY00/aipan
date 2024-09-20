@@ -5,6 +5,7 @@ LABEL authors="Lei"
 WORKDIR /app
 
 #  安装pnmp
+RUN apk add --no-cache npm 
 RUN npm install -g pnpm
 
 # 复制 package.json 和 package-lock.json
