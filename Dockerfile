@@ -1,4 +1,4 @@
-FROM node:18-alpine@sha256:50dbd35c9ef2be4b8f69f2a705b081bc967c28155fb8d437befc59c431597326
+FROM node:slim
 
 LABEL authors="Lei"
 
