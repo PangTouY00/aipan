@@ -1,10 +1,10 @@
-FROM node:alpine 
+FROM alpine:latest
 
 LABEL authors="Lei"
 
 WORKDIR /app
 
-#  安装pnmp
+# 安装pnpm
 RUN npm install -g pnpm
 
 # 复制 package.json 和 package-lock.json
@@ -12,11 +12,6 @@ COPY package*.json ./
 
 # 使用 pnpm 安装依赖
 RUN pnpm install
-
-COPY . .
-
-# 安装 QEMU 静态二进制翻译工具
-RUN apk update && apk add --no-cache qemu-arm-static
 
 # 定义构建时的变量
 ARG DATABASE_URL
@@ -34,7 +29,7 @@ RUN qemu-arm-static -D /usr/bin/npx prisma migrate deploy
 
 RUN npm run build
 
-# Set NuxtJS system variables so the application can be reached on your network
+# Set NuxtJS system variables
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3000
 
