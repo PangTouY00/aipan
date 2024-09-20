@@ -1,4 +1,4 @@
-FROM arm32v7/node:16-alpine
+FROM node:22-alpine
 
 LABEL authors="Lei"
 
