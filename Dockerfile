@@ -10,7 +10,7 @@ RUN npm install -g pnpm
 # 复制 package.json 和 package-lock.json
 COPY package*.json ./
 
-npm install -g node-gyp
+RUN npm install -g node-gyp
 
 # 使用 pnpm 安装依赖
 RUN pnpm install
