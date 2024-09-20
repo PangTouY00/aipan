@@ -28,6 +28,6 @@ jobs:
       with:
         context: .
         file: Dockerfile
-        platforms: arm/v7
+        platforms: linux/arm/v7
         push: true
         tags: w1770946466/aipan-netdisk-search:latest 
